@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHAMPION'S CHOICE｜世界頂尖巨星與奧運國手的營養選擇</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+    body {
+      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .hero-gradient {
+      background: linear-gradient(135deg, #064e3b 0%, #0f172a 60%, #1e1b4b 100%);
+    }
+    .card-shadow {
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+    }
+    .card-shadow:hover {
+      box-shadow: 0 20px 35px -10px rgba(16, 185, 129, 0.2), 0 12px 16px -8px rgba(0, 0, 0, 0.08);
+      transform: translateY(-4px);
+    }
+    /* Modal 動畫 */
+    .modal-enter {
+      animation: modalFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased min-h-screen relative" id="top">
+
+  <!-- 頂部導航列 -->
+  <nav class="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-slate-950 font-black shadow-lg shadow-emerald-500/20">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <div>
+          <span class="text-base font-black tracking-wider text-emerald-400">CHAMPION'S CHOICE</span>
+          <span class="block text-[11px] text-slate-400 font-medium">點擊首頁標誌即可隨時回到頂部</span>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-3">
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-xs font-bold text-slate-300 hover:text-white px-3 py-1.5 rounded-lg border border-slate-700 hover:bg-slate-800 transition-all flex items-center gap-1.5">
+          <span>🏠</span> 首頁頂部
+        </button>
+        <button onclick="window.print()" class="px-3.5 py-1.5 rounded-lg text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white transition-all shadow-md">
+          列印 / 存為簡報
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主視覺 Hero Banner -->
+  <header class="relative hero-gradient text-white pt-14 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div class="absolute inset-0 opacity-25 pointer-events-none">
+      <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-emerald-500 blur-3xl"></div>
+      <div class="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-blue-500 blur-3xl"></div>
+    </div>
+
+    <div class="relative max-w-5xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-emerald-300 text-xs sm:text-sm font-semibold mb-6 shadow-inner">
+        ⭐ 全球 130+ 頂尖職業選手・60+ 職業球團・5+ 國家奧會的共同選擇
+      </div>
+
+      <h1 class="text-3xl sm:text-6xl font-black tracking-tight leading-tight mb-6">
+        不只是一個人，而是全世界：<br>
+        <span class="bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300 bg-clip-text text-transparent">
+          看見頂尖冠軍選手的營養日常
+        </span>
+      </h1>
+
+      <p class="text-base sm:text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto mb-10 font-normal">
+        從 5 座金球獎得主 <strong>C羅</strong>、8 座金球獎球王 <strong>梅西</strong>、世界盃女足冠軍 <strong>奧爾加</strong>、2.7 億粉絲板球天王 <strong>柯利</strong>，到奧運國手與職棒王牌。完整收錄每位名人的<strong>真實寫真照片、代言背景與親身飲用習慣</strong>。
+      </p>
+
+      <!-- 4 大信任徽章 -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+        <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 text-center">
+          <div class="text-3xl font-black text-emerald-400">130+ 位</div>
+          <div class="text-xs text-slate-300 font-medium mt-1">全球贊助職業選手</div>
+        </div>
+        <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 text-center">
+          <div class="text-3xl font-black text-amber-400">NSF 認證</div>
+          <div class="text-xs text-slate-300 font-medium mt-1">通過嚴苛運動禁藥檢驗</div>
+        </div>
+        <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 text-center">
+          <div class="text-3xl font-black text-emerald-400">60+ 球團</div>
+          <div class="text-xs text-slate-300 font-medium mt-1">職業足球與體育豪門</div>
+        </div>
+        <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 text-center">
+          <div class="text-3xl font-black text-teal-300">90+ 國家</div>
+          <div class="text-xs text-slate-300 font-medium mt-1">全球各國嚴苛標準核准</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 內容區 -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20 pb-20">
+
+    <!-- 搜尋與篩選列 -->
+    <div class="bg-white rounded-2xl p-4 shadow-xl border border-slate-200/80 mb-10 max-w-4xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center gap-3">
+        <!-- 即時搜尋輸入框 -->
+        <div class="relative w-full md:w-72">
+          <input type="text" id="searchInput" oninput="searchCelebrities()" placeholder="🔍 搜尋人名、項目（如足球、奧運、台灣）..." class="w-full pl-9 pr-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+          <span class="absolute left-3 top-2.5 text-slate-400 text-xs">🔍</span>
+        </div>
+
+        <!-- 類別切換按鈕 -->
+        <div class="flex items-center flex-wrap gap-1.5 w-full md:w-auto flex-1 justify-center md:justify-end" id="filter-buttons">
+          <button onclick="filterCategory('all')" class="filter-btn active px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-emerald-600 text-white shadow-md">
+            全部名人
+          </button>
+          <button onclick="filterCategory('football')" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-slate-50 text-slate-600 hover:bg-slate-100 border border-slate-200">
+            ⚽ 足球巨星
+          </button>
+          <button onclick="filterCategory('olympic')" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-slate-50 text-slate-600 hover:bg-slate-100 border border-slate-200">
+            🥇 奧運與體壇天王
+          </button>
+          <button onclick="filterCategory('taiwan')" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-slate-50 text-slate-600 hover:bg-slate-100 border border-slate-200">
+            🇹🇼 台灣頂尖國手
+          </button>
+          <button onclick="filterCategory('asia')" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-slate-50 text-slate-600 hover:bg-slate-100 border border-slate-200">
+            🌏 亞洲國民明星
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 區塊標題 -->
+    <div class="mb-8 flex items-center justify-between">
+      <div>
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
+          <span class="w-2.5 h-6 bg-emerald-600 rounded-full inline-block"></span>
+          世界頂尖冠軍選手寫真名冊
+        </h2>
+        <p class="text-xs text-slate-500 mt-1">點擊卡片或下方按鈕，可直接在網頁內彈出照片放大預覽與詳細習慣，隨時點「返回」</p>
+      </div>
+      <span class="text-xs font-bold text-emerald-800 bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200">
+        點擊即可在頁面內預覽
+      </span>
+    </div>
+
+    <!-- 名人卡片網格 (每張卡片皆有照片，點擊可彈出燈箱) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" id="cards-container">
+
+      <!-- 1. C羅 (CR7) -->
+      <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="football" data-keywords="C羅 足球 羅納度 ronaldo 葡萄牙 5座金球獎 cr7">
+        <div onclick="openCelebrityModal('cr7')" class="cursor-pointer">
+          <div class="relative h-64 overflow-hidden group bg-slate-900">
+            <img src="./images/cr7.jpg" alt="C羅 Cristiano Ronaldo" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-400 text-slate-950 shadow-md">
+                🏆 官方全球代言 10+ 年
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-4 right-4 text-white">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-xl font-black tracking-tight">克里斯蒂亞諾·羅納度</h3>
+                  <p class="text-xs text-emerald-300 font-medium">Cristiano Ronaldo｜葡萄牙球王</p>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-white/20 backdrop-blur-md text-xs font-bold text-amber-300">5 座金球獎</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <blockquote class="text-xs sm:text-sm text-slate-600 italic border-l-4 border-emerald-500 pl-3 mb-4 leading-relaxed">
+              「營養對我來說是個人事業。合適的營養補充，是我在全世界最高強度聯賽中維持巔峰狀態的最大秘密。」
+            </blockquote>
+            <div class="bg-emerald-50/80 rounded-2xl p-4 border border-emerald-100 mb-4">
+              <div class="flex items-center gap-2 text-xs font-bold text-emerald-900 mb-1.5">
+                <span class="text-base">🥤</span> 每日飲用與聯名合作：
+              </div>
+              <p class="text-xs text-emerald-800 leading-relaxed font-medium">
+                每日飲用 <strong>Herbalife24 Formula 1 Sport</strong> 運動營養奶昔維持低體脂，並與賀寶芙研發團隊合作推出聯名運動飲品 <strong>CR7 Drive</strong>。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+          <button onclick="openCelebrityModal('cr7')" class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-800 hover:underline">
+            🔍 放大查看詳細飲用檔案
+          </button>
+          <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-semibold">官方代言</span>
+        </div>
+      </div>
+
+      <!-- 2. 梅西 (Lionel Messi) -->
+      <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="football" data-keywords="梅西 messi 足球 巴塞隆納 阿根廷 8座金球獎 世界盃">
+        <div onclick="openCelebrityModal('messi')" class="cursor-pointer">
+          <div class="relative h-64 overflow-hidden group bg-slate-900">
+            <img src="./images/messi.jpg" alt="梅西 Lionel Messi" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-blue-500 text-white shadow-md">
+                ⚽ 巴薩時期全球贊助
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-4 right-4 text-white">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-xl font-black tracking-tight">里奧內爾·梅西</h3>
+                  <p class="text-xs text-blue-300 font-medium">Lionel Messi｜世界盃冠軍球王</p>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-white/20 backdrop-blur-md text-xs font-bold text-amber-300">8 座金球獎紀錄</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <blockquote class="text-xs sm:text-sm text-slate-600 italic border-l-4 border-blue-500 pl-3 mb-4 leading-relaxed">
+              「Have you had your shake today?（今天你喝奶昔了嗎？）」—— 梅西在巴塞隆納全盛時期拍攝的全球家喻戶曉廣告。
+            </blockquote>
+            <div class="bg-blue-50/80 rounded-2xl p-4 border border-blue-100 mb-4">
+              <div class="flex items-center gap-2 text-xs font-bold text-blue-900 mb-1.5">
+                <span class="text-base">🎬</span> 經典電視廣告與公益合作：
+              </div>
+              <p class="text-xs text-blue-800 leading-relaxed font-medium">
+                2010～2013 年簽約全球官方贊助，梅西親手調製並飲用 Formula 1 奶昔；梅西基金會亦與賀寶芙攜手改善全球兒童營養。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+          <button onclick="openCelebrityModal('messi')" class="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 hover:text-blue-800 hover:underline">
+            🔍 放大查看詳細飲用檔案
+          </button>
+          <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-semibold">電視廣告</span>
+        </div>
+      </div>
+
+      <!-- 3. 維拉特·柯利 (Virat Kohli) -->
+      <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="olympic" data-keywords="柯利 kohli 板球 印度 自律 2.7億 素食 蛋白質">
+        <div onclick="openCelebrityModal('kohli')" class="cursor-pointer">
+          <div class="relative h-64 overflow-hidden group bg-slate-900">
+            <img src="./images/kohli.jpg" alt="維拉特·柯利 Virat Kohli" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-500 text-white shadow-md">
+                🏏 2.7 億粉絲體壇巨星
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-4 right-4 text-white">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-xl font-black tracking-tight">維拉特·柯利</h3>
+                  <p class="text-xs text-amber-300 font-medium">Virat Kohli｜印度板球傳奇國寶</p>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-white/20 backdrop-blur-md text-xs font-bold text-amber-300">體壇頂級指標</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <blockquote class="text-xs sm:text-sm text-slate-600 italic border-l-4 border-amber-500 pl-3 mb-4 leading-relaxed">
+              以全球罕見的「極致自律」與純素飲食著稱。他親身實證植物性蛋白奶昔能打造世界最強悍的耐力與爆發力。
+            </blockquote>
+            <div class="bg-amber-50/80 rounded-2xl p-4 border border-amber-100 mb-4">
+              <div class="flex items-center gap-2 text-xs font-bold text-amber-900 mb-1.5">
+                <span class="text-base">🌱</span> 植物蛋白與活力早餐：
+              </div>
+              <p class="text-xs text-amber-800 leading-relaxed font-medium">
+                長年代言賀寶芙，每日早晨必飲用 <strong>Formula 1 營養奶昔</strong>，全球推廣「80% 營養搭配 20% 運動」生活方式。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+          <button onclick="openCelebrityModal('kohli')" class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-800 hover:underline">
+            🔍 放大查看詳細飲用檔案
+          </button>
+          <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-semibold">自律典範</span>
+        </div>
+      </div>
+
+      <!-- 4. 奧爾加·卡莫納 (Olga Carmona) -->
+      <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="football" data-keywords="奧爾加 olga carmona 女足 西班牙 世界盃冠軍 隊長 皇家馬德里 足球">
+        <div onclick="openCelebrityModal('olga')" class="cursor-pointer">
+          <div class="relative h-64 overflow-hidden group bg-slate-900">
+            <img src="./images/olga.png" alt="奧爾加·卡莫納 Olga Carmona" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-rose-500 text-white shadow-md">
+                ⚽ 2023 世界盃冠軍功臣
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-4 right-4 text-white">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-xl font-black tracking-tight">奧爾加·卡莫納</h3>
+                  <p class="text-xs text-rose-300 font-medium">Olga Carmona｜西班牙女足隊長</p>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-white/20 backdrop-blur-md text-xs font-bold text-amber-300">皇馬女足球星</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <blockquote class="text-xs sm:text-sm text-slate-600 italic border-l-4 border-rose-500 pl-3 mb-4 leading-relaxed">
+              2023 年女足世界盃決賽踢入致勝球的功臣！賀寶芙簽約運動營養大使，展現速度與爆發力。
+            </blockquote>
+            <div class="bg-rose-50/80 rounded-2xl p-4 border border-rose-100 mb-4">
+              <div class="flex items-center gap-2 text-xs font-bold text-rose-900 mb-1.5">
+                <span class="text-base">🇪🇸</span> 高強度職業賽季營養：
+              </div>
+              <p class="text-xs text-rose-800 leading-relaxed font-medium">
+                以 <strong>Herbalife24 系列</strong> 運動修復配方支持高頻出賽，保持頂級心肺與全身肌力平衡。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+          <button onclick="openCelebrityModal('olga')" class="inline-flex items-center gap-1.5 text-xs font-bold text-rose-700 hover:text-rose-800 hover:underline">
+            🔍 放大查看詳細飲用檔案
+          </button>
+          <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-semibold">世界盃冠軍</span>
+        </div>
+      </div>
+
+      <!-- 5. 小豌豆 埃爾南德斯 (Chicharito) -->
+      <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="football" data-keywords="小豌豆 埃爾南德斯 chicharito 墨西哥 曼聯 洛杉磯銀河 足球 隊長">
+        <div onclick="openCelebrityModal('chicharito')" class="cursor-pointer">
+          <div class="relative h-64 overflow-hidden group bg-slate-900">
+            <img src="./images/chicharito.jpg" alt="小豌豆 埃爾南德斯 Chicharito" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-emerald-600 text-white shadow-md">
+                ⚽ 墨西哥傳奇神射手
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-4 right-4 text-white">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-xl font-black tracking-tight">小豌豆 埃爾南德斯</h3>
+                  <p class="text-xs text-emerald-300 font-medium">Javier "Chicharito"｜曼聯/皇馬名將</p>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-white/20 backdrop-blur-md text-xs font-bold text-emerald-300">銀河隊隊長</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <blockquote class="text-xs sm:text-sm text-slate-600 italic border-l-4 border-emerald-600 pl-3 mb-4 leading-relaxed">
+              墨西哥隊史最佳射手！效力洛杉磯銀河隊期間擔任隊長，長年使用賀寶芙作為賽前充電與賽後肌肉修復關鍵來源。
+            </blockquote>
+            <div class="bg-emerald-50/80 rounded-2xl p-4 border border-emerald-100 mb-4">
+              <div class="flex items-center gap-2 text-xs font-bold text-emerald-900 mb-1.5">
+                <span class="text-base">🇲🇽</span> 職業賽場前鋒充能：
+              </div>
+              <p class="text-xs text-emerald-800 leading-relaxed font-medium">
+                透過乳清蛋白與電解質配比，維持 90 分鐘高速衝刺跑動所需的能量不衰竭。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+          <button onclick="openCelebrityModal('chicharito')" class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-800 hover:underline">
+            🔍 放大查看詳細飲用檔案
+          </button>
+          <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-semibold">足壇傳奇</span>
+        </div>
+      </div>
+
+      <!-- 6. 瑪麗·科姆 (Mary Kom) -->
+      <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="olympic" data-keywords="瑪麗科姆 mary kom 拳擊 奧運 6屆世界冠軍 印度 代言13年">
+        <div onclick="openCelebrityModal('marykom')" class="cursor-pointer">
+          <div class="relative h-64 overflow-hidden group bg-slate-900">
+            <img src="./images/marykom.jpg" alt="瑪麗·科姆 Mary Kom" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-500 text-white shadow-md">
+                🥊 6 屆世界拳擊冠軍
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-4 right-4 text-white">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-xl font-black tracking-tight">瑪麗·科姆</h3>
+                  <p class="text-xs text-amber-300 font-medium">Mary Kom｜奧運銅牌・拳擊傳奇</p>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-white/20 backdrop-blur-md text-xs font-bold text-amber-300">代言超 13 年</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <blockquote class="text-xs sm:text-sm text-slate-600 italic border-l-4 border-amber-500 pl-3 mb-4 leading-relaxed">
+              印度國寶級女拳王！長達 13 年擔任賀寶芙全球大使，常年透過蛋白質奶昔精準控制量級體重並保持出拳力量。
+            </blockquote>
+            <div class="bg-amber-50/80 rounded-2xl p-4 border border-amber-100 mb-4">
+              <div class="flex items-center gap-2 text-xs font-bold text-amber-900 mb-1.5">
+                <span class="text-base">🥊</span> 體重控制與肌肉保護：
+              </div>
+              <p class="text-xs text-amber-800 leading-relaxed font-medium">
+                透過低熱量、高優質蛋白質代餐，在嚴苛量級過磅前完美維持肌肉質量與體力。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+          <button onclick="openCelebrityModal('marykom')" class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-800 hover:underline">
+            🔍 放大查看詳細飲用檔案
+          </button>
+          <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-semibold">13年代言</span>
+        </div>
+      </div>
+
+      <!-- 7. 金軟景 (韓國) -->
+      <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="asia" data-keywords="金軟景 排球 韓國 韓星 我獨自生活 奧運 女帝">
+        <div onclick="openCelebrityModal('kim')" class="cursor-pointer">
+          <div class="relative h-64 overflow-hidden group bg-slate-900">
+            <img src="./images/kim.jpg" alt="金軟景 Kim Yeon-koung" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-pink-500 text-white shadow-md">
+                🏐 韓國排球女帝
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-4 right-4 text-white">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-xl font-black tracking-tight">金軟景</h3>
+                  <p class="text-xs text-pink-300 font-medium">김연경｜世界排球第一主攻手</p>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-white/20 backdrop-blur-md text-xs font-bold text-pink-200">韓綜常客明星</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <blockquote class="text-xs sm:text-sm text-slate-600 italic border-l-4 border-pink-500 pl-3 mb-4 leading-relaxed">
+              韓國最具國民好感度的女性巨星！常年活躍於《我獨自生活》、《Running Man》，深受男女老少愛戴。
+            </blockquote>
+            <div class="bg-pink-50/80 rounded-2xl p-4 border border-pink-100 mb-4">
+              <div class="flex items-center gap-2 text-xs font-bold text-pink-900 mb-1.5">
+                <span class="text-base">🇰🇷</span> 韓國賀寶芙 3 年官方贊助：
+              </div>
+              <p class="text-xs text-pink-800 leading-relaxed font-medium">
+                韓國賀寶芙正式簽約「官方營養贊助商」，提供 <strong>Herbalife24 系列</strong> 運動營養與修復奶昔。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+          <button onclick="openCelebrityModal('kim')" class="inline-flex items-center gap-1.5 text-xs font-bold text-pink-700 hover:text-pink-800 hover:underline">
+            🔍 放大查看詳細飲用檔案
+          </button>
+          <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-semibold">韓國官方認證</span>
+        </div>
+      </div>
+
+      <!-- 8. 拉克夏·森 (Lakshya Sen) -->
+      <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="olympic" data-keywords="拉克夏森 lakshya sen 羽球 奧運 印度 全英公開賽 青年奧運">
+        <div onclick="openCelebrityModal('lakshya')" class="cursor-pointer">
+          <div class="relative h-64 overflow-hidden group bg-slate-900">
+            <img src="./images/lakshya.jpg" alt="拉克夏·森 Lakshya Sen" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-purple-600 text-white shadow-md">
+                🏸 羽球大英國協金牌
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-4 right-4 text-white">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-xl font-black tracking-tight">拉克夏·森</h3>
+                  <p class="text-xs text-purple-300 font-medium">Lakshya Sen｜全英公開賽亞軍・奧運四強</p>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-white/20 backdrop-blur-md text-xs font-bold text-purple-300">世界級好手</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <blockquote class="text-xs sm:text-sm text-slate-600 italic border-l-4 border-purple-600 pl-3 mb-4 leading-relaxed">
+              新生代羽球頂級好手！羽球賽事長達 1~2 小時的高頻跑動，長期由賀寶芙官方贊助，靠科學配比奶昔支持體能。
+            </blockquote>
+            <div class="bg-purple-50/80 rounded-2xl p-4 border border-purple-100 mb-4">
+              <div class="flex items-center gap-2 text-xs font-bold text-purple-900 mb-1.5">
+                <span class="text-base">🏸</span> 高速敏捷運動能量：
+              </div>
+              <p class="text-xs text-purple-800 leading-relaxed font-medium">
+                注重賽前碳水與蛋白質均衡補給，防止劇烈跳躍與急停帶來的肌肉疲勞累積。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+          <button onclick="openCelebrityModal('lakshya')" class="inline-flex items-center gap-1.5 text-xs font-bold text-purple-700 hover:text-purple-800 hover:underline">
+            🔍 放大查看詳細飲用檔案
+          </button>
+          <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-semibold">羽球天王</span>
+        </div>
+      </div>
+
+      <!-- 9. 馬妮卡·巴特拉 (Manika Batra) -->
+      <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="olympic" data-keywords="馬妮卡 巴特拉 manika batra 桌球 印度 奧運 大英國協金牌 桌球女神">
+        <div onclick="openCelebrityModal('manika')" class="cursor-pointer">
+          <div class="relative h-64 overflow-hidden group bg-slate-900">
+            <img src="./images/manika.jpg" alt="馬妮卡·巴特拉 Manika Batra" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-pink-600 text-white shadow-md">
+                🏓 體壇女神・大英國協多金
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-4 right-4 text-white">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-xl font-black tracking-tight">馬妮卡·巴特拉</h3>
+                  <p class="text-xs text-pink-300 font-medium">Manika Batra｜印度桌球一姐</p>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-white/20 backdrop-blur-md text-xs font-bold text-pink-200">合作超 6 年</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <blockquote class="text-xs sm:text-sm text-slate-600 italic border-l-4 border-pink-600 pl-3 mb-4 leading-relaxed">
+              印度桌球史上排名最高選手。賀寶芙長達 6 年的營養夥伴，推廣快速敏捷反應力與每日均衡能量攝取。
+            </blockquote>
+            <div class="bg-pink-50/80 rounded-2xl p-4 border border-pink-100 mb-4">
+              <div class="flex items-center gap-2 text-xs font-bold text-pink-900 mb-1.5">
+                <span class="text-base">🏓</span> 專注度與身形管理：
+              </div>
+              <p class="text-xs text-pink-800 leading-relaxed font-medium">
+                透過 Formula 1 奶昔保持緊緻健美的運動員體態，兼顧高競技水準與活力氣色。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+          <button onclick="openCelebrityModal('manika')" class="inline-flex items-center gap-1.5 text-xs font-bold text-pink-700 hover:text-pink-800 hover:underline">
+            🔍 放大查看詳細飲用檔案
+          </button>
+          <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-semibold">桌球名將</span>
+        </div>
+      </div>
+
+      <!-- 10. 江少慶 (台灣) -->
+      <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="taiwan" data-keywords="江少慶 台灣 棒球 投手 富邦悍將 旅美 155km">
+        <div onclick="openCelebrityModal('jiang')" class="cursor-pointer">
+          <div class="relative h-64 overflow-hidden group bg-slate-900">
+            <img src="./images/jiang.jpg" alt="江少慶" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-emerald-600 text-white shadow-md">
+                ⚾ 台灣職棒王牌投手
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-4 right-4 text-white">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-xl font-black tracking-tight">江少慶</h3>
+                  <p class="text-xs text-emerald-300 font-medium">富邦悍將王牌投手｜前旅美名投</p>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-white/20 backdrop-blur-md text-xs font-bold text-emerald-300">155km+ 鋼鐵體魄</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <blockquote class="text-xs sm:text-sm text-slate-600 italic border-l-4 border-emerald-600 pl-3 mb-4 leading-relaxed">
+              職棒投手承受劇烈的體能燃燒與手臂壓力，科學化的精準營養補給是維持強壯肌肉質量與投球續航力的基石。
+            </blockquote>
+            <div class="bg-emerald-50/80 rounded-2xl p-4 border border-emerald-100 mb-4">
+              <div class="flex items-center gap-2 text-xs font-bold text-emerald-900 mb-1.5">
+                <span class="text-base">🇹🇼</span> 台灣賀寶芙官方贊助：
+              </div>
+              <p class="text-xs text-emerald-800 leading-relaxed font-medium">
+                賀寶芙台灣官方贊助頂級王牌，透過專屬運動營養補給方案，打造高水準肌肉力量與賽後快速修復。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+          <button onclick="openCelebrityModal('jiang')" class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-800 hover:underline">
+            🔍 放大查看詳細飲用檔案
+          </button>
+          <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-semibold">台灣之光</span>
+        </div>
+      </div>
+
+      <!-- 11. 文姿云 (台灣) -->
+      <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="taiwan" data-keywords="文姿云 空手道 台灣 奧運 銅牌 小清新 體重控制">
+        <div onclick="openCelebrityModal('wen')" class="cursor-pointer">
+          <div class="relative h-64 overflow-hidden group bg-slate-900">
+            <img src="./images/wen.jpg" alt="文姿云" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-rose-500 text-white shadow-md">
+                🥋 東京奧運空手道銅牌
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-4 right-4 text-white">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-xl font-black tracking-tight">文姿云</h3>
+                  <p class="text-xs text-rose-300 font-medium">空手道世界冠軍｜奧運銅牌</p>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-white/20 backdrop-blur-md text-xs font-bold text-amber-300">「空手道小清新」</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <blockquote class="text-xs sm:text-sm text-slate-600 italic border-l-4 border-rose-500 pl-3 mb-4 leading-relaxed">
+              量級運動員對體重控制極為嚴格，降體重時如何維持肌肉與飽滿精神，仰賴頂級科學營養支持。
+            </blockquote>
+            <div class="bg-rose-50/80 rounded-2xl p-4 border border-rose-100 mb-4">
+              <div class="flex items-center gap-2 text-xs font-bold text-rose-900 mb-1.5">
+                <span class="text-base">🏅</span> 奧運選手體態管理：
+              </div>
+              <p class="text-xs text-rose-800 leading-relaxed font-medium">
+                曾列賀寶芙運動營養贊助名單，使用低熱量、均衡微量營養素的方案，確保維持最完美比賽體重與肌肉爆發力。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+          <button onclick="openCelebrityModal('wen')" class="inline-flex items-center gap-1.5 text-xs font-bold text-rose-700 hover:text-rose-800 hover:underline">
+            🔍 放大查看詳細飲用檔案
+          </button>
+          <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-semibold">奧運國手</span>
+        </div>
+      </div>
+
+      <!-- 12. 黃亭茵 (台灣自由車一姐) -->
+      <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="taiwan" data-keywords="黃亭茵 台灣 自由車 單車 奧運 粉紅小鋼砲 亞運金牌">
+        <div onclick="openCelebrityModal('huang')" class="cursor-pointer">
+          <div class="relative h-64 overflow-hidden group bg-slate-900">
+            <img src="./images/huang.jpg" alt="黃亭茵" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-pink-500 text-white shadow-md">
+                🚴‍♀️ 奧運自由車「粉紅小鋼砲」
+              </span>
+            </div>
+            <div class="absolute bottom-3 left-4 right-4 text-white">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-xl font-black tracking-tight">黃亭茵</h3>
+                  <p class="text-xs text-pink-300 font-medium">台灣自由車一姐・亞運多金得主</p>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-white/20 backdrop-blur-md text-xs font-bold text-pink-200">自 2019 贊助</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <blockquote class="text-xs sm:text-sm text-slate-600 italic border-l-4 border-pink-500 pl-3 mb-4 leading-relaxed">
+              連續征戰奧運的公路賽頂尖女將。長途騎乘動輒數百公里，自 2019 年起由賀寶芙官方贊助，長期依賴運動奶昔維持肌耐力與心肺表現。
+            </blockquote>
+            <div class="bg-pink-50/80 rounded-2xl p-4 border border-pink-100 mb-4">
+              <div class="flex items-center gap-2 text-xs font-bold text-pink-900 mb-1.5">
+                <span class="text-base">🚴</span> 極限耐力運動補給：
+              </div>
+              <p class="text-xs text-pink-800 leading-relaxed font-medium">
+                長途公路賽極度消耗肝醣與肌肉，透過高效率吸收的配方奶昔，迅速恢復體力迎接隔日賽事。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+          <button onclick="openCelebrityModal('huang')" class="inline-flex items-center gap-1.5 text-xs font-bold text-pink-700 hover:text-pink-800 hover:underline">
+            🔍 放大查看詳細飲用檔案
+          </button>
+          <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-semibold">自由車一姐</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 頂級球團與國家奧會合作專區 -->
+    <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl p-8 sm:p-12 mb-16 card-shadow border border-slate-700">
+      <div class="max-w-3xl mx-auto text-center mb-10">
+        <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-3.5 py-1.5 rounded-full border border-emerald-500/30">
+          GLOBAL TEAMS & ORGANIZATIONS
+        </span>
+        <h3 class="text-2xl sm:text-3xl font-black mt-3 tracking-tight">
+          世界頂尖職業球隊與國家奧會官方合作
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-400 mt-2">
+          不只是個人運動員，賀寶芙更是多支世界豪門職業球會與國家奧林匹克委員會的官方指定營養夥伴
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700">
+          <div class="text-2xl font-black text-amber-400 mb-1">LA GALAXY</div>
+          <div class="text-sm font-bold text-white mb-2">洛杉磯銀河隊（美足大聯盟）</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            MLS 歷史最長球衣胸前贊助（2007 至今超過 17 年），全體隊員每日指定飲用。
+          </p>
+        </div>
+
+        <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700">
+          <div class="text-2xl font-black text-rose-400 mb-1">ATLÉTICO MADRID</div>
+          <div class="text-sm font-bold text-white mb-2">馬德里競技女子足球隊</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            西班牙女子西甲豪門官方指定營養夥伴，胸前印著 HERBALIFE 征戰歐冠聯賽。
+          </p>
+        </div>
+
+        <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700">
+          <div class="text-2xl font-black text-blue-400 mb-1">CONI ITALIA</div>
+          <div class="text-sm font-bold text-white mb-2">義大利國家奧林匹克委員會</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            義大利國家奧運代表隊整體營養夥伴，包含多位冬奧獎牌得主名將。
+          </p>
+        </div>
+
+        <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700">
+          <div class="text-2xl font-black text-emerald-400 mb-1">SPECIAL OLYMPICS</div>
+          <div class="text-sm font-bold text-white mb-2">特殊奧林匹克運動會</div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            全球性官方健身與健康營養推廣夥伴，長期支持弱勢運動員體能教育。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 說服力解析：為什麼運動員與名人可以放心喝？ -->
+    <div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 card-shadow">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <span class="text-xs font-black uppercase tracking-wider text-emerald-700 bg-emerald-100 px-3.5 py-1.5 rounded-full">
+          科學與品質認證
+        </span>
+        <h3 class="text-2xl sm:text-4xl font-black text-slate-900 mt-4 tracking-tight">
+          客戶最常問：為什麼全世界這麼多職業選手敢每天喝？
+        </h3>
+        <p class="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
+          職業選手接受全世界最嚴苛的禁藥篩檢與身體檢查，他們的選擇就是最高規格的品質保證。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center font-black text-xl mb-4 shadow-md shadow-emerald-600/20">
+            ✓
+          </div>
+          <h4 class="text-base font-bold text-slate-900 mb-2">NSF 運動禁藥最高認證</h4>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Herbalife24 系列通過美國國家衛生基金會（NSF Certified for Sport®）認證，嚴格檢測超過 280+ 種禁藥物質，保證安全無虞。
+          </p>
+        </div>
+
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center font-black text-xl mb-4 shadow-md shadow-emerald-600/20">
+            ⚖
+          </div>
+          <h4 class="text-base font-bold text-slate-900 mb-2">全面均衡的細胞營養</h4>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            不只是蛋白質！一杯奶昔涵蓋 20 多種維生素礦物質、優質植物蛋白與膳食纖維，為身體細胞與肌肉修復提供即時、好吸收的高效能量。
+          </p>
+        </div>
+
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center font-black text-xl mb-4 shadow-md shadow-emerald-600/20">
+            ⚽
+          </div>
+          <h4 class="text-base font-bold text-slate-900 mb-2">關於貝克漢的贊助事實</h4>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            貝克漢在洛杉磯銀河隊踢滿 5 年賽季，球衣胸前印著 HERBALIFE。這印證了品牌在國際頂級足球聯賽的巨大影響力與崇高聲譽。
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- 頁尾 -->
+  <footer class="bg-slate-900 text-slate-400 py-10 px-4 text-center text-xs border-t border-slate-800">
+    <div class="max-w-4xl mx-auto space-y-2">
+      <p class="font-bold text-slate-300">CHAMPION'S CHOICE 營養特輯｜專為健康活躍生活推廣設計</p>
+      <p class="text-slate-500">照片版權為各公開媒體與官方新聞通訊所有，本專輯僅供體育營養推廣與客戶健康諮詢展示使用</p>
+    </div>
+  </footer>
+
+  <!-- 浮動「返回頂部」按鈕 -->
+  <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-6 right-6 z-30 bg-emerald-600 hover:bg-emerald-500 text-white p-3.5 rounded-full shadow-2xl flex items-center gap-2 text-xs font-bold transition-all transform hover:scale-110 border-2 border-white">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+    <span class="hidden sm:inline">回到首頁頂端</span>
+  </button>
+
+  <!-- 💡 內建彈出式燈箱 (Modal)：點擊直接在頁面內展開，不必跳出網頁 -->
+  <div id="celebrityModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl modal-enter border border-slate-200 relative flex flex-col max-h-[90vh]">
+      
+      <!-- 燈箱頂部：大大的關閉 / 返回首頁按鈕 -->
+      <div class="p-4 bg-slate-900 text-white flex items-center justify-between border-b border-slate-800">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">名人飲用檔案細節</span>
+        </div>
+        <button onclick="closeModal()" class="px-4 py-1.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-bold transition-all flex items-center gap-1.5 shadow-lg shadow-emerald-900/30">
+          <span>✕</span> 返回名冊首頁
+        </button>
+      </div>
+
+      <!-- 燈箱內容主體 (可捲動) -->
+      <div class="p-6 overflow-y-auto space-y-5">
+        <div class="flex flex-col sm:flex-row gap-5 items-center sm:items-start">
+          <div class="w-full sm:w-48 h-56 rounded-2xl overflow-hidden bg-slate-900 shadow-md flex-shrink-0">
+            <img id="modalImg" src="" alt="" class="w-full h-full object-cover">
+          </div>
+          <div class="flex-1 text-center sm:text-left">
+            <span id="modalBadge" class="inline-block px-3 py-1 rounded-full text-xs font-black bg-emerald-100 text-emerald-800 mb-2"></span>
+            <h3 id="modalName" class="text-2xl font-black text-slate-900"></h3>
+            <p id="modalTitle" class="text-xs text-slate-500 font-medium mb-3"></p>
+            <p id="modalQuote" class="text-xs sm:text-sm text-slate-600 italic border-l-4 border-emerald-500 pl-3 leading-relaxed mb-4"></p>
+          </div>
+        </div>
+
+        <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+          <h4 class="text-xs font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+            <span>🥤</span> 代表性合作與日常飲用習慣：
+          </h4>
+          <p id="modalHabit" class="text-xs text-slate-600 leading-relaxed"></p>
+        </div>
+
+        <!-- 官方查驗延伸按鈕 -->
+        <div class="bg-emerald-50/60 rounded-2xl p-4 border border-emerald-100 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div>
+            <div class="text-xs font-bold text-emerald-900">想查閱更多公開新聞或廣告照片？</div>
+            <div class="text-[11px] text-emerald-700">（會在瀏覽器「新分頁」開啟，查閱完關閉該分頁即可回到本頁）</div>
+          </div>
+          <a id="modalExternalLink" href="#" target="_blank" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-md transition-all whitespace-nowrap flex items-center gap-1.5">
+            <span>🔍</span> 開啟 Google 圖片查證
+          </a>
+        </div>
+      </div>
+
+      <!-- 燈箱底部按鈕 -->
+      <div class="p-4 bg-slate-100 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <span class="text-xs text-slate-500 font-medium hidden sm:inline">提示：點擊視窗外灰色區域或按鍵盤 Esc 鍵也能隨時返回</span>
+        <button onclick="closeModal()" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs sm:text-sm font-bold shadow transition-all flex items-center justify-center gap-2">
+          <span>✕</span> 關閉此視窗，返回名冊首頁
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 互動腳本：搜尋、篩選與燈箱控制 -->
+  <script>
+    // 名人資料字典
+    const celebritiesData = {
+      cr7: {
+        name: "克里斯蒂亞諾·羅納度",
+        title: "Cristiano Ronaldo｜葡萄牙足球天王・5 座金球獎",
+        img: "./images/cr7.jpg",
+        badge: "🏆 官方全球代言 10+ 年",
+        quote: "「營養對我來說是個人事業。合適的營養補充，是我在全世界最高強度聯賽中維持巔峰狀態的最大秘密。」",
+        habit: "每日早晨與高強度訓練後飲用 Herbalife24 Formula 1 Sport 運動營養奶昔維持低體脂，並與賀寶芙研發團隊合作推出聯名運動飲品 CR7 Drive。",
+        search: "Cristiano Ronaldo Herbalife shake"
+      },
+      messi: {
+        name: "里奧內爾·梅西",
+        title: "Lionel Messi｜阿根廷球王・8 座金球獎世界紀錄",
+        img: "./images/messi.jpg",
+        badge: "⚽ 巴薩時期全球官方贊助",
+        quote: "「Have you had your shake today?（今天你喝奶昔了嗎？）」—— 梅西在巴塞隆納全盛時期拍攝的全球家喻戶曉廣告。",
+        habit: "2010～2013 年簽約全球官方贊助，梅西親手調製並飲用 Formula 1 奶昔；梅西基金會亦與賀寶芙攜手改善全球兒童營養。",
+        search: "Lionel Messi Herbalife shake"
+      },
+      kohli: {
+        name: "維拉特·柯利",
+        title: "Virat Kohli｜印度板球傳奇・全球 2.7 億粉絲體壇天王",
+        img: "./images/kohli.jpg",
+        badge: "🏏 2.7 億粉絲體壇指標",
+        quote: "以極致自律的素食飲食聞名全球，親身實證植物性蛋白奶昔帶來的巔峰體魄與持久體能。",
+        habit: "長年代言賀寶芙，每日早晨必飲用 Formula 1 植物蛋白營養奶昔，全球推廣「80% 營養搭配 20% 運動」健康活躍生活哲學。",
+        search: "Virat Kohli Herbalife shake"
+      },
+      olga: {
+        name: "奧爾加·卡莫納",
+        title: "Olga Carmona｜西班牙女足隊長・2023 世界盃決賽進球功臣",
+        img: "./images/olga.png",
+        badge: "⚽ 2023 世界盃冠軍隊長",
+        quote: "女足世界盃決賽踢入致勝球的功臣！賀寶芙簽約運動營養大使，展現速度與爆發力。",
+        habit: "以 Herbalife24 系列運動修復配方支持高頻聯賽出賽，保持頂級心肺與全身肌力平衡。",
+        search: "Olga Carmona Herbalife"
+      },
+      chicharito: {
+        name: "小豌豆 埃爾南德斯",
+        title: "Javier 'Chicharito'｜墨西哥隊史最佳射手・前洛杉磯銀河隊長",
+        img: "./images/chicharito.jpg",
+        badge: "⚽ 墨西哥傳奇名將",
+        quote: "墨西哥隊史最佳射手！效力洛杉磯銀河隊期間擔任隊長，長年使用賀寶芙作為賽後修復來源。",
+        habit: "賽後黃金窗口補充蛋白質奶昔維持頂級衝刺爆發力，支持連續出賽的高強度耗損。",
+        search: "Chicharito Herbalife"
+      },
+      marykom: {
+        name: "瑪麗·科姆",
+        title: "Mary Kom｜奧運拳擊銅牌・6 屆世界拳擊冠軍",
+        img: "./images/marykom.jpg",
+        badge: "🥊 代言超過 13 年",
+        quote: "印度傳奇女拳王！長達 13 年擔任賀寶芙全球大使，常年透過奶昔控制量級體重。",
+        habit: "在嚴苛量級過磅前使用低熱量高蛋白代餐，保持肌肉質量與出拳力量。",
+        search: "Mary Kom Herbalife shake"
+      },
+      kim: {
+        name: "金軟景",
+        title: "김연경｜韓國排球女帝・韓綜《我獨自生活》國民嘉賓",
+        img: "./images/kim.jpg",
+        badge: "🏐 韓國官方 3 年贊助",
+        quote: "韓國最具國民好感度的女性巨星！深受各年齡層愛戴，聯賽密集征戰必備。",
+        habit: "韓國賀寶芙三年官方贊助，提供 Herbalife24 系列運動修復奶昔與電解質配方。",
+        search: "김연경 허벌라이프"
+      },
+      lakshya: {
+        name: "拉克夏·森",
+        title: "Lakshya Sen｜大英國協羽球金牌・全英公開賽亞軍・奧運四強",
+        img: "./images/lakshya.jpg",
+        badge: "🏸 羽球天王",
+        quote: "羽球高頻跑動極耗體力，長期由賀寶芙官方贊助，靠科學配比奶昔支持體能。",
+        habit: "注重賽前賽後均衡補給，防止劇烈跳躍帶來的肌肉疲勞累積。",
+        search: "Lakshya Sen Herbalife"
+      },
+      manika: {
+        name: "馬妮卡·巴特拉",
+        title: "Manika Batra｜印度桌球一姐・體壇女神・大英國協多金得主",
+        img: "./images/manika.jpg",
+        badge: "🏓 合作超過 6 年",
+        quote: "印度桌球史上最高排名選手。賀寶芙長達 6 年的營養夥伴，推廣快速敏捷反應力。",
+        habit: "透過 Formula 1 奶昔保持緊緻健美的運動員體態與氣色，兼顧高競技水準與活力。",
+        search: "Manika Batra Herbalife"
+      },
+      jiang: {
+        name: "江少慶",
+        title: "富邦悍將王牌投手｜前旅美名投・155km+ 鋼鐵體魄",
+        img: "./images/jiang.jpg",
+        badge: "⚾ 台灣職棒王牌代言",
+        quote: "職棒投手承受劇烈的體能燃燒與手臂壓力，科學化的精準營養補給是維持強壯肌肉質量的基石。",
+        habit: "賀寶芙台灣官方贊助頂級王牌，透過專屬運動營養補給方案，打造高水準肌肉力量與賽後快速修復。",
+        search: "江少慶 賀寶芙"
+      },
+      wen: {
+        name: "文姿云",
+        title: "空手道世界冠軍・東京奧運銅牌｜「空手道小清新」",
+        img: "./images/wen.jpg",
+        badge: "🥋 東京奧運國手",
+        quote: "量級運動員對體重控制極為嚴格，降體重時如何維持肌肉與飽滿精神，仰賴頂級科學營養支持。",
+        habit: "曾列賀寶芙運動營養贊助名單，使用低熱量均衡微量營養維持比賽身材與爆發力。",
+        search: "文姿云 賀寶芙"
+      },
+      huang: {
+        name: "黃亭茵",
+        title: "台灣自由車一姐・「粉紅小鋼砲」・奧運公路賽國手",
+        img: "./images/huang.jpg",
+        badge: "🚴‍♀️ 自 2019 官方贊助",
+        quote: "連續征戰奧運的公路賽頂尖女將。自 2019 年起由賀寶芙官方贊助，長期依賴運動奶昔維持肌耐力。",
+        habit: "長途公路賽消耗極大，透過高效率吸收的配方奶昔迅速恢復體力迎接隔日賽事。",
+        search: "黃亭茵 賀寶芙"
+      }
+    };
+
+    // 打開燈箱視窗
+    function openCelebrityModal(id) {
+      const data = celebritiesData[id];
+      if (!data) return;
+
+      document.getElementById('modalImg').src = data.img;
+      document.getElementById('modalImg').alt = data.name;
+      document.getElementById('modalBadge').innerText = data.badge;
+      document.getElementById('modalName').innerText = data.name;
+      document.getElementById('modalTitle').innerText = data.title;
+      document.getElementById('modalQuote').innerText = data.quote;
+      document.getElementById('modalHabit').innerText = data.habit;
+      document.getElementById('modalExternalLink').href = "https://www.google.com/search?tbm=isch&q=" + encodeURIComponent(data.search);
+
+      const modal = document.getElementById('celebrityModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden'; // 防止背景滾動
+    }
+
+    // 關閉燈箱視窗
+    function closeModal() {
+      const modal = document.getElementById('celebrityModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = 'auto'; // 恢復滾動
+    }
+
+    // 點擊背景空白處也可關閉
+    document.getElementById('celebrityModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    // 按鍵盤 ESC 鍵也可關閉
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+
+    // 類別切換與搜尋邏輯
+    let currentCategory = 'all';
+
+    function filterCategory(category) {
+      currentCategory = category;
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-emerald-600', 'text-white', 'shadow-md');
+        btn.classList.add('bg-slate-50', 'text-slate-600', 'border', 'border-slate-200');
+      });
+      event.target.classList.remove('bg-slate-50', 'text-slate-600', 'border', 'border-slate-200');
+      event.target.classList.add('bg-emerald-600', 'text-white', 'shadow-md');
+
+      applyFilterAndSearch();
+    }
+
+    function searchCelebrities() {
+      applyFilterAndSearch();
+    }
+
+    function applyFilterAndSearch() {
+      const query = document.getElementById('searchInput').value.trim().toLowerCase();
+      const allCards = document.querySelectorAll('.celebrity-card');
+
+      allCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        const keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
+        const textContent = card.innerText.toLowerCase();
+
+        const matchesCategory = (currentCategory === 'all' || category === currentCategory);
+        const matchesSearch = (!query || keywords.includes(query) || textContent.includes(query));
+
+        if (matchesCategory && matchesSearch) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
