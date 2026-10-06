@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
@@ -50,6 +50,21 @@
       to { opacity: 1; transform: scale(1); }
     }
   </style>
+  <script>
+    // ?箸?抒?頛摰寥嚗?湔?冽?桅???images/ 鞈?憭?    document.addEventListener('error', function (e) {
+      if (e.target && e.target.tagName === 'IMG' && !e.target.dataset.retried) {
+        e.target.dataset.retried = 'true';
+        var src = e.target.getAttribute('src');
+        if (src) {
+          if (src.indexOf('./images/') === 0) {
+            e.target.src = src.replace('./images/', './');
+          } else if (src.indexOf('./') === 0) {
+            e.target.src = src.replace('./', './images/');
+          }
+        }
+      }
+    }, true);
+  </script>
 </head>
 <body class="bg-slate-100 text-slate-800 antialiased min-h-screen relative" id="top">
 
@@ -178,7 +193,7 @@
       <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="football" data-keywords="C羅 足球 羅納度 ronaldo 葡萄牙 5座金球獎 cr7">
         <div onclick="openCelebrityModal('cr7')" class="cursor-pointer">
           <div class="relative h-64 overflow-hidden group bg-slate-900">
-            <img src="./images/cr7.jpg" alt="C羅 Cristiano Ronaldo" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <img src="./cr7.jpg" alt="C羅 Cristiano Ronaldo" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
             <div class="absolute top-4 left-4">
               <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-400 text-slate-950 shadow-md">
@@ -221,7 +236,7 @@
       <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="football" data-keywords="梅西 messi 足球 巴塞隆納 阿根廷 8座金球獎 世界盃">
         <div onclick="openCelebrityModal('messi')" class="cursor-pointer">
           <div class="relative h-64 overflow-hidden group bg-slate-900">
-            <img src="./images/messi.jpg" alt="梅西 Lionel Messi" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <img src="./messi.jpg" alt="梅西 Lionel Messi" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
             <div class="absolute top-4 left-4">
               <span class="px-3 py-1 rounded-full text-xs font-black bg-blue-500 text-white shadow-md">
@@ -264,7 +279,7 @@
       <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="olympic" data-keywords="柯利 kohli 板球 印度 自律 2.7億 素食 蛋白質">
         <div onclick="openCelebrityModal('kohli')" class="cursor-pointer">
           <div class="relative h-64 overflow-hidden group bg-slate-900">
-            <img src="./images/kohli.jpg" alt="維拉特·柯利 Virat Kohli" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <img src="./kohli.jpg" alt="維拉特·柯利 Virat Kohli" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
             <div class="absolute top-4 left-4">
               <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-500 text-white shadow-md">
@@ -307,7 +322,7 @@
       <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="football" data-keywords="奧爾加 olga carmona 女足 西班牙 世界盃冠軍 隊長 皇家馬德里 足球">
         <div onclick="openCelebrityModal('olga')" class="cursor-pointer">
           <div class="relative h-64 overflow-hidden group bg-slate-900">
-            <img src="./images/olga.png" alt="奧爾加·卡莫納 Olga Carmona" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <img src="./olga.png" alt="奧爾加·卡莫納 Olga Carmona" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
             <div class="absolute top-4 left-4">
               <span class="px-3 py-1 rounded-full text-xs font-black bg-rose-500 text-white shadow-md">
@@ -350,7 +365,7 @@
       <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="football" data-keywords="小豌豆 埃爾南德斯 chicharito 墨西哥 曼聯 洛杉磯銀河 足球 隊長">
         <div onclick="openCelebrityModal('chicharito')" class="cursor-pointer">
           <div class="relative h-64 overflow-hidden group bg-slate-900">
-            <img src="./images/chicharito.jpg" alt="小豌豆 埃爾南德斯 Chicharito" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <img src="./chicharito.jpg" alt="小豌豆 埃爾南德斯 Chicharito" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
             <div class="absolute top-4 left-4">
               <span class="px-3 py-1 rounded-full text-xs font-black bg-emerald-600 text-white shadow-md">
@@ -393,7 +408,7 @@
       <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="olympic" data-keywords="瑪麗科姆 mary kom 拳擊 奧運 6屆世界冠軍 印度 代言13年">
         <div onclick="openCelebrityModal('marykom')" class="cursor-pointer">
           <div class="relative h-64 overflow-hidden group bg-slate-900">
-            <img src="./images/marykom.jpg" alt="瑪麗·科姆 Mary Kom" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <img src="./marykom.jpg" alt="瑪麗·科姆 Mary Kom" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
             <div class="absolute top-4 left-4">
               <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-500 text-white shadow-md">
@@ -436,7 +451,7 @@
       <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="asia" data-keywords="金軟景 排球 韓國 韓星 我獨自生活 奧運 女帝">
         <div onclick="openCelebrityModal('kim')" class="cursor-pointer">
           <div class="relative h-64 overflow-hidden group bg-slate-900">
-            <img src="./images/kim.jpg" alt="金軟景 Kim Yeon-koung" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <img src="./kim.jpg" alt="金軟景 Kim Yeon-koung" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
             <div class="absolute top-4 left-4">
               <span class="px-3 py-1 rounded-full text-xs font-black bg-pink-500 text-white shadow-md">
@@ -479,7 +494,7 @@
       <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="olympic" data-keywords="拉克夏森 lakshya sen 羽球 奧運 印度 全英公開賽 青年奧運">
         <div onclick="openCelebrityModal('lakshya')" class="cursor-pointer">
           <div class="relative h-64 overflow-hidden group bg-slate-900">
-            <img src="./images/lakshya.jpg" alt="拉克夏·森 Lakshya Sen" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <img src="./lakshya.jpg" alt="拉克夏·森 Lakshya Sen" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
             <div class="absolute top-4 left-4">
               <span class="px-3 py-1 rounded-full text-xs font-black bg-purple-600 text-white shadow-md">
@@ -522,7 +537,7 @@
       <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="olympic" data-keywords="馬妮卡 巴特拉 manika batra 桌球 印度 奧運 大英國協金牌 桌球女神">
         <div onclick="openCelebrityModal('manika')" class="cursor-pointer">
           <div class="relative h-64 overflow-hidden group bg-slate-900">
-            <img src="./images/manika.jpg" alt="馬妮卡·巴特拉 Manika Batra" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <img src="./manika.jpg" alt="馬妮卡·巴特拉 Manika Batra" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
             <div class="absolute top-4 left-4">
               <span class="px-3 py-1 rounded-full text-xs font-black bg-pink-600 text-white shadow-md">
@@ -565,7 +580,7 @@
       <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="taiwan" data-keywords="江少慶 台灣 棒球 投手 富邦悍將 旅美 155km">
         <div onclick="openCelebrityModal('jiang')" class="cursor-pointer">
           <div class="relative h-64 overflow-hidden group bg-slate-900">
-            <img src="./images/jiang.jpg" alt="江少慶" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+            <img src="./jiang.jpg" alt="江少慶" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
             <div class="absolute top-4 left-4">
               <span class="px-3 py-1 rounded-full text-xs font-black bg-emerald-600 text-white shadow-md">
@@ -608,7 +623,7 @@
       <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="taiwan" data-keywords="文姿云 空手道 台灣 奧運 銅牌 小清新 體重控制">
         <div onclick="openCelebrityModal('wen')" class="cursor-pointer">
           <div class="relative h-64 overflow-hidden group bg-slate-900">
-            <img src="./images/wen.jpg" alt="文姿云" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <img src="./wen.jpg" alt="文姿云" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
             <div class="absolute top-4 left-4">
               <span class="px-3 py-1 rounded-full text-xs font-black bg-rose-500 text-white shadow-md">
@@ -651,7 +666,7 @@
       <div class="celebrity-card bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200 transition-all duration-300 flex flex-col justify-between" data-category="taiwan" data-keywords="黃亭茵 台灣 自由車 單車 奧運 粉紅小鋼砲 亞運金牌">
         <div onclick="openCelebrityModal('huang')" class="cursor-pointer">
           <div class="relative h-64 overflow-hidden group bg-slate-900">
-            <img src="./images/huang.jpg" alt="黃亭茵" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+            <img src="./huang.jpg" alt="黃亭茵" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
             <div class="absolute top-4 left-4">
               <span class="px-3 py-1 rounded-full text-xs font-black bg-pink-500 text-white shadow-md">
@@ -872,7 +887,7 @@
       cr7: {
         name: "克里斯蒂亞諾·羅納度",
         title: "Cristiano Ronaldo｜葡萄牙足球天王・5 座金球獎",
-        img: "./images/cr7.jpg",
+        img: "./cr7.jpg",
         badge: "🏆 官方全球代言 10+ 年",
         quote: "「營養對我來說是個人事業。合適的營養補充，是我在全世界最高強度聯賽中維持巔峰狀態的最大秘密。」",
         habit: "每日早晨與高強度訓練後飲用 Herbalife24 Formula 1 Sport 運動營養奶昔維持低體脂，並與賀寶芙研發團隊合作推出聯名運動飲品 CR7 Drive。",
@@ -881,7 +896,7 @@
       messi: {
         name: "里奧內爾·梅西",
         title: "Lionel Messi｜阿根廷球王・8 座金球獎世界紀錄",
-        img: "./images/messi.jpg",
+        img: "./messi.jpg",
         badge: "⚽ 巴薩時期全球官方贊助",
         quote: "「Have you had your shake today?（今天你喝奶昔了嗎？）」—— 梅西在巴塞隆納全盛時期拍攝的全球家喻戶曉廣告。",
         habit: "2010～2013 年簽約全球官方贊助，梅西親手調製並飲用 Formula 1 奶昔；梅西基金會亦與賀寶芙攜手改善全球兒童營養。",
@@ -890,7 +905,7 @@
       kohli: {
         name: "維拉特·柯利",
         title: "Virat Kohli｜印度板球傳奇・全球 2.7 億粉絲體壇天王",
-        img: "./images/kohli.jpg",
+        img: "./kohli.jpg",
         badge: "🏏 2.7 億粉絲體壇指標",
         quote: "以極致自律的素食飲食聞名全球，親身實證植物性蛋白奶昔帶來的巔峰體魄與持久體能。",
         habit: "長年代言賀寶芙，每日早晨必飲用 Formula 1 植物蛋白營養奶昔，全球推廣「80% 營養搭配 20% 運動」健康活躍生活哲學。",
@@ -899,7 +914,7 @@
       olga: {
         name: "奧爾加·卡莫納",
         title: "Olga Carmona｜西班牙女足隊長・2023 世界盃決賽進球功臣",
-        img: "./images/olga.png",
+        img: "./olga.png",
         badge: "⚽ 2023 世界盃冠軍隊長",
         quote: "女足世界盃決賽踢入致勝球的功臣！賀寶芙簽約運動營養大使，展現速度與爆發力。",
         habit: "以 Herbalife24 系列運動修復配方支持高頻聯賽出賽，保持頂級心肺與全身肌力平衡。",
@@ -908,7 +923,7 @@
       chicharito: {
         name: "小豌豆 埃爾南德斯",
         title: "Javier 'Chicharito'｜墨西哥隊史最佳射手・前洛杉磯銀河隊長",
-        img: "./images/chicharito.jpg",
+        img: "./chicharito.jpg",
         badge: "⚽ 墨西哥傳奇名將",
         quote: "墨西哥隊史最佳射手！效力洛杉磯銀河隊期間擔任隊長，長年使用賀寶芙作為賽後修復來源。",
         habit: "賽後黃金窗口補充蛋白質奶昔維持頂級衝刺爆發力，支持連續出賽的高強度耗損。",
@@ -917,7 +932,7 @@
       marykom: {
         name: "瑪麗·科姆",
         title: "Mary Kom｜奧運拳擊銅牌・6 屆世界拳擊冠軍",
-        img: "./images/marykom.jpg",
+        img: "./marykom.jpg",
         badge: "🥊 代言超過 13 年",
         quote: "印度傳奇女拳王！長達 13 年擔任賀寶芙全球大使，常年透過奶昔控制量級體重。",
         habit: "在嚴苛量級過磅前使用低熱量高蛋白代餐，保持肌肉質量與出拳力量。",
@@ -926,7 +941,7 @@
       kim: {
         name: "金軟景",
         title: "김연경｜韓國排球女帝・韓綜《我獨自生活》國民嘉賓",
-        img: "./images/kim.jpg",
+        img: "./kim.jpg",
         badge: "🏐 韓國官方 3 年贊助",
         quote: "韓國最具國民好感度的女性巨星！深受各年齡層愛戴，聯賽密集征戰必備。",
         habit: "韓國賀寶芙三年官方贊助，提供 Herbalife24 系列運動修復奶昔與電解質配方。",
@@ -935,7 +950,7 @@
       lakshya: {
         name: "拉克夏·森",
         title: "Lakshya Sen｜大英國協羽球金牌・全英公開賽亞軍・奧運四強",
-        img: "./images/lakshya.jpg",
+        img: "./lakshya.jpg",
         badge: "🏸 羽球天王",
         quote: "羽球高頻跑動極耗體力，長期由賀寶芙官方贊助，靠科學配比奶昔支持體能。",
         habit: "注重賽前賽後均衡補給，防止劇烈跳躍帶來的肌肉疲勞累積。",
@@ -944,7 +959,7 @@
       manika: {
         name: "馬妮卡·巴特拉",
         title: "Manika Batra｜印度桌球一姐・體壇女神・大英國協多金得主",
-        img: "./images/manika.jpg",
+        img: "./manika.jpg",
         badge: "🏓 合作超過 6 年",
         quote: "印度桌球史上最高排名選手。賀寶芙長達 6 年的營養夥伴，推廣快速敏捷反應力。",
         habit: "透過 Formula 1 奶昔保持緊緻健美的運動員體態與氣色，兼顧高競技水準與活力。",
@@ -953,7 +968,7 @@
       jiang: {
         name: "江少慶",
         title: "富邦悍將王牌投手｜前旅美名投・155km+ 鋼鐵體魄",
-        img: "./images/jiang.jpg",
+        img: "./jiang.jpg",
         badge: "⚾ 台灣職棒王牌代言",
         quote: "職棒投手承受劇烈的體能燃燒與手臂壓力，科學化的精準營養補給是維持強壯肌肉質量的基石。",
         habit: "賀寶芙台灣官方贊助頂級王牌，透過專屬運動營養補給方案，打造高水準肌肉力量與賽後快速修復。",
@@ -962,7 +977,7 @@
       wen: {
         name: "文姿云",
         title: "空手道世界冠軍・東京奧運銅牌｜「空手道小清新」",
-        img: "./images/wen.jpg",
+        img: "./wen.jpg",
         badge: "🥋 東京奧運國手",
         quote: "量級運動員對體重控制極為嚴格，降體重時如何維持肌肉與飽滿精神，仰賴頂級科學營養支持。",
         habit: "曾列賀寶芙運動營養贊助名單，使用低熱量均衡微量營養維持比賽身材與爆發力。",
@@ -971,7 +986,7 @@
       huang: {
         name: "黃亭茵",
         title: "台灣自由車一姐・「粉紅小鋼砲」・奧運公路賽國手",
-        img: "./images/huang.jpg",
+        img: "./huang.jpg",
         badge: "🚴‍♀️ 自 2019 官方贊助",
         quote: "連續征戰奧運的公路賽頂尖女將。自 2019 年起由賀寶芙官方贊助，長期依賴運動奶昔維持肌耐力。",
         habit: "長途公路賽消耗極大，透過高效率吸收的配方奶昔迅速恢復體力迎接隔日賽事。",
